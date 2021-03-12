@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Page App</title>
+</head>
+<body>
+    <h1>Luke's Webview</h1>
+    <h2>my domain</h2>
+    <ul>
+        <li>
+            <a href="https://www.yahoo.com" target="_blank">target=_blank a tag</a>
+        </li>
+        <li>
+            <button onclick="open_default()">
+                window open default
+            </button>
+            URL is loaded into a new window, or tab. This is default
+        </li>
+        <li>
+            <button onclick="open_blank()">
+                window open blank
+            </button>
+            URL is loaded into a new window, or tab. This is default
+        </li>
+        <li>   
+            <button onclick="open_parent()">
+                window open parent
+            </button>
+            URL is loaded into the parent frame
+        </li>
+        <li>
+            <button onclick="open_self()">
+                window open self
+            </button>
+            URL replaces the current page
+        </li>
+        <li>
+            <button onclick="open_top()">
+                window open top
+            </button>
+            URL replaces any framesets that may be loaded
+        </li>
+        <li>
+            <button onclick="open_yahoo_sportsbook()">
+                window open with user defined name
+            </button>
+        </li>
+    </ul>
+
+    <h2>not my domain</h2>
+    <ul>
+        <li>
+            <a href="https://sports.pa.betmgm.com/" target="_blank">target=_blank a tag</a>
+        </li>
+        <li>
+            <button onclick="open_default2()">
+                window open default
+            </button>
+            URL is loaded into a new window, or tab. This is default
+        </li>
+        <li>
+            <button onclick="open_blank2()">
+                window open blank
+            </button>
+            URL is loaded into a new window, or tab. This is default
+        </li>
+        <li>   
+            <button onclick="open_parent2()">
+                window open parent
+            </button>
+            URL is loaded into the parent frame
+        </li>
+        <li>
+            <button onclick="open_self2()">
+                window open self
+            </button>
+            URL replaces the current page
+        </li>
+        <li>
+            <button onclick="open_top2()">
+                window open top
+            </button>
+            URL replaces any framesets that may be loaded
+        </li>
+        <li>
+            <button onclick="open_yahoo_sportsbook2()">
+                window open with user defined name
+            </button>
+        </li>
+    </ul>
+
+    <script>
+        var my_domain = "https://www.yahoo.com"
+        var not_my_domain = "https://sports.pa.betmgm.com/"
+        function open_default()
+        {
+            window.open(my_domain)
+        }
+        function open_blank()
+        {
+            window.open(my_domain, "_blank")
+        }
+        function open_parent()
+        {
+            window.open(my_domain, "_parent")
+        }
+        function open_self()
+        {
+            window.open(my_domain, "_self")
+        }
+        function open_top()
+        {
+            window.open(my_domain, "_top")
+        }
+        function open_yahoo_sportsbook()
+        {
+            window.open(my_domain, "yahoo-sportsbook")
+        }
+
+        function open_default2()
+        {
+            window.open(not_my_domain)
+        }
+        function open_blank2()
+        {
+            window.open(not_my_domain, "_blank")
+        }
+        function open_parent2()
+        {
+            window.open(not_my_domain, "_parent")
+        }
+        function open_self2()
+        {
+            window.open(not_my_domain, "_self")
+        }
+        function open_top2()
+        {
+            window.open(not_my_domain, "_top")
+        }
+        function open_yahoo_sportsbook2()
+        {
+            window.open(not_my_domain, "yahoo-sportsbook")
+        }
+    </script>
+</body>
+</html>
